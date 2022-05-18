@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2rem;
+	min-height: 100%; 
+	 
+}
+
+.grid_container{
+	display: grid;
+	gap: 5px;
+	grid-template: 
+	"header" 30px
+	"navbar" 100px
+	"fondo"	auto
+	"formulario" 100px
+	"footer" 50px
+	;
+}
+
+.header{
+	grid-area: header;
+	background-color: #B6FFCE;
+}
+
+
+.testimonio{
+	grid-area: testimonio;
+	background-color: #F6FFA4;
+}
+
+.fondo{
+	grid-area: fondo;
+	background-color: #FDD7AA;
+}
+
+.formulario{
+	grid-area: formulario;
+	background-color: #FFA8A8;
+}
+
+.mensaje{
+	grid-area: mensaje;
+	background-color: #B4FF9F;
+}
+
+.retencion{
+	grid-area: retencion;
+	background-color: #FFD59E;
+}
+
+.footer{
+	grid-area: footer;
+	background-color: #D18CE0;
+}
+
+@media (min-width:50px) 
+
+{
+
+	.grid_container{
+
+		grid-template: 
+		"header     header" 	200px 
+		"mensaje    mensaje" 	50px
+		"formulario formulario" auto
+		"retencion  retencion"  100px
+		"footer     footer"     100px /
+		 100px 		auto;
+ 	}
+.testimonio{display: none;}
+.fondo{display: none;}
+}
+
+@media (min-width: 576px) {
+	.grid_container{
+		grid-template: 
+		"header 	header 	   header" 	        200px 
+		"fondo	    fondo 	   formulario" 	    250px
+		"mensaje 	mensaje    formulario" 	    250px
+		"testimonio testimonio testimonio" 	    250px
+		"retencion 	retencion  retencion" 	    250px
+		"footer 	footer 	   footer" 	        150px /
+		 200px 		auto;
+	}
+.testimonio{display: block;}
+.fondo{display: block;}
+}
+
+
+@media (min-width: 768px) {
+	.grid_container{
+		grid-template: 
+		"header 	header 	   header" 	        200px 
+		"fondo	    fondo 	   formulario" 	    250px
+		"mensaje 	mensaje    formulario" 	    250px
+		"testimonio testimonio testimonio" 	    250px
+		"retencion 	retencion  retencion" 	    250px
+		"footer 	footer 	   footer" 	        150px /
+		 200px 		auto;
+	}
+.testimonio{display: block;}
+.fondo{display: block;}
+}
+
+ 
+@media (min-width: 900px) {
+	.grid_container{
+		grid-template: 
+		"header 	header 	    header     header" 	        100px 
+		"fondo 	    fondo       mensaje    formulario" 	    auto
+		"testimonio testimonio  retencion  formulario" 	    auto
+		"footer 	footer      footer	   footer" 	        40px /
+		 200px   	auto        200px     
+	}
+.testimonio{display: block;}
+.fondo{display: block;}
+}
+
+
+@media (min-width: 1200px) {
+	.grid_container{
+		grid-template: 
+		"header 	header 	    header     header" 	        50px 
+		"fondo 	    fondo       mensaje    formulario" 	    auto
+		"testimonio testimonio  retencion  formulario" 	    auto
+		"footer 	footer      footer	   footer" 	        40px /
+		 200px   	auto        200px     
+	}
+.testimonio{display: block;}
+.fondo{display: block;}
+}
